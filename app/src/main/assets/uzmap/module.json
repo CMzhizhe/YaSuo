@@ -1,0 +1,8 @@
+{
+	"modules":[
+		{
+			"name":"picaicompress",
+			"class":"com.gaoxx.yasuo.picaicompress.PicAiCompressActivity"
+		}
+	]
+}

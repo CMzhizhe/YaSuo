@@ -99,7 +99,10 @@
     function openPhotoAlbum(){
         var param = {showCamera:true,single:false,requestNum:9,comProgress:true,targetSize:500};
         picAiCompressMoudle.openAiBum(param,function(ret,err){
-        alert(ret.status);
+            console.log("状态码:"+ret.status);
+            if(ret.picPaths){
+                console.log("压缩后图片路径:"+ret.picPaths);
+            }
         });
     }
 

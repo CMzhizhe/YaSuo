@@ -10,11 +10,21 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     provided files('../app/libs/apiEngine v1.1.0.jar')
     //图片选择器的控件 https://github.com/lovetuzitong/MultiImageSelector
-    compile 'com.github.lovetuzitong:MultiImageSelector:1.2'
+    // compile 'com.github.lovetuzitong:MultiImageSelector:1.2'
+    provided files('../app/libs/android-support-v4.jar')
 }

@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">picAiCompress</string>
-    <string name="mis_permission_rationale">缺少必须的读写权限</string>
-    <string name="YaSuo_help">帮助</string>
-    <string name="YaSuo_permissions_help_text">当前应用缺少必要的读权限，请添加权限后再使用</string>
-    <string name="YaSuo_quit">退出</string>
-    <string name="YaSuo_OK">确定</string>
-    <string name="YaSuo_settings">设置</string>
-</resources>

@@ -59,40 +59,6 @@ public class PicAiCompressActivity extends UZModule {
 
     public PicAiCompressActivity(UZWebView webView) {
         super(webView);
-       //检测是否含有权限
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN // Permission was added in API Level 16
-                && ActivityCompat.checkSelfPermission(mContext, Manifest.permission.READ_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED) {
-                new AlertDialog.Builder(mContext)
-                        .setTitle(R.string.YaSuo_help)
-                        .setCancelable(false)
-                        .setMessage(R.string.YaSuo_permissions_help_text)
-                        .setPositiveButton(R.string.YaSuo_OK, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                try {
-                                    err.put(STATUS,FAILSTATUS);
-                                    err.put(ERRORMESSAGE,"没有读权限");
-                                    moduleContext.error(err,null,true);
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                        })
-                        .setNegativeButton(R.string.YaSuo_quit, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                try {
-                                    err.put(STATUS,FAILSTATUS);
-                                    err.put(ERRORMESSAGE,"没有读权限");
-                                    moduleContext.error(err,null,true);
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                        })
-                        .create().show();
-        }
     }
 
 
